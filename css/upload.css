@@ -1,0 +1,23 @@
+.xfname {
+    font-weight: 700
+}
+
+.xfsize {
+    font-style: italic
+}
+
+.xrow td {
+    text-align: left
+}
+
+.fdescr {
+    width: 25em !important
+}
+
+.del_btn {
+    float: right
+}
+
+.xrow td {
+    background: #f2f2f2
+}

@@ -1,0 +1,653 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv=content-Type content="text-html; charset=UTF-8">
+    <meta name="description" content="APKadmin.com - Share APK files ">
+    <meta name="keywords" content="apk file upload,share apk files,free apk upload">
+    <script language="JavaScript" type="06ca2f547266853bdd94276e-text/javascript" CHARSET="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APKadmin.com - Upload and Share APK files</title>
+    <link rel="icon" href="https://apkadmin.com/images/favicon.gif" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://apkadmin.com/favicon.ico" type="image/x-icon" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.1/css/v4-shims.min.css">
+    <link rel="stylesheet" type="text/css" href="https://apkadmin.com/css/style.css" />
+    <link rel="stylesheet" href="https://apkadmin.com/css/template.css">
+    <script type="06ca2f547266853bdd94276e-text/javascript" src="https://apkadmin.com/js/jquery.paging.js"></script>
+    <script type="06ca2f547266853bdd94276e-text/javascript" src="https://apkadmin.com/js/jquery.cookie.js"></script>
+    <script type="06ca2f547266853bdd94276e-text/javascript" src="https://apkadmin.com/js/paging.js?r=1"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" type="06ca2f547266853bdd94276e-text/javascript"></script>
+    <script src="https://apkadmin.com/js/bootstrap.min.js" type="06ca2f547266853bdd94276e-text/javascript"></script>
+    <script type="06ca2f547266853bdd94276e-text/javascript">
+        $(document).ready(function() {
+            $("#showallarch").click(function() {
+                $(this).css('display', 'none'),
+                    $("#fileinfoarch").css('height', '100%'),
+                    $("#grad").css('display', 'none');
+            });
+        });
+    </script>
+    <script type="06ca2f547266853bdd94276e-text/javascript">
+        (function($) {
+            $(function() {
+
+                $('ul.tabs').on('click', 'li:not(.current)', function() {
+                    var section = $(this).parents('div.section:first');
+                    var idx = $(this).index();
+
+                    $(this).addClass('current').siblings().removeClass('current');
+                    $(section).find('> div.box').eq(idx).fadeIn(150).siblings('div.box').hide();
+                    $.cookie($(section).attr('id') + 'tab', idx);
+                });
+
+                $('.section').each(function(i, e) {
+                    if (!e.id) return;
+
+                    var idx;
+                    if (idx = $.cookie(e.id + 'tab')) {
+                        $(e).find('> ul > li').eq(idx).click();
+                    }
+                });
+
+            })
+        })(jQuery)
+    </script>
+    <script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" async type="06ca2f547266853bdd94276e-text/javascript"></script>
+    <script type="06ca2f547266853bdd94276e-text/javascript">
+        window.googletag = window.googletag || {
+            cmd: []
+        };
+        googletag.cmd.push(function() {
+
+            // responsive positions
+            if (window.innerWidth > 1000) {
+                googletag.defineSlot('/147246189/apkadmin.com_336x280_desktop', [
+                    [300, 250],
+                    [336, 280]
+                ], 'apkadmin.com_336x280_responsive_1').addService(googletag.pubads());
+                googletag.defineSlot('/147246189/apkadmin.com_336x280_desktop_2', [
+                    [300, 250],
+                    [336, 280]
+                ], 'apkadmin.com_336x280_responsive_2').addService(googletag.pubads());
+            } else if (window.innerWidth > 760) {
+                googletag.defineSlot('/147246189/apkadmin.com_336x280_tablet', [
+                    [300, 250],
+                    [336, 280]
+                ], 'apkadmin.com_336x280_responsive_1').addService(googletag.pubads());
+                googletag.defineSlot('/147246189/apkadmin.com_336x280_tablet_2', [
+                    [300, 250],
+                    [336, 280]
+                ], 'apkadmin.com_336x280_responsive_2').addService(googletag.pubads());
+            } else {
+                googletag.defineSlot('/147246189/apkadmin.com_336x280_mobile', [
+                    [300, 250],
+                    [336, 280]
+                ], 'apkadmin.com_336x280_responsive_1').addService(googletag.pubads());
+                googletag.defineSlot('/147246189/apkadmin.com_336x280_mobile_2', [
+                    [300, 250],
+                    [336, 280]
+                ], 'apkadmin.com_336x280_responsive_2').addService(googletag.pubads());
+            }
+
+            // non-responsive positions
+
+
+            googletag.pubads().enableSingleRequest();
+            googletag.pubads().disableInitialLoad();
+            googletag.enableServices();
+        });
+    </script>
+    <script src="https://stpd.cloud/assets/hb/apkadmincom.js" async type="06ca2f547266853bdd94276e-text/javascript"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="clear"></div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onClick="if (!window.__cfRLUnblockHandlers) return false; closeNav()" style="font-size:36px!important; border-bottom:0px;color:#fff;" data-cf-modified-06ca2f547266853bdd94276e-="">&times;</a>
+            <div style="margin-top:40px;">
+                <a href="https://apkadmin.com/login.html">Login</a>
+                <a href="https://apkadmin.com/register.html">Sign Up</a>
+                <a href="https://apkadmin.com">Home</a>
+                <a href="https://apkadmin.com/premium.html">Premium</a>
+                <a href="https://apkadmin.com/?op=catalogue">Catalogue</a>
+                <a href="https://apkadmin.com/faq.html">FAQ</a>
+                <a href="https://apkadmin.com/tos.html">Terms of service</a>
+                <a href="https://apkadmin.com/?op=checkfiles">Link Checker</a>
+                <a href="https://apkadmin.com/?op=news">News</a>
+                <a href="https://apkadmin.com/contact.html">Contact Us</a>
+                <a href="https://apkadmin.com/links.html">Links</a>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="https://apkadmin.com/"><img src="https://apkadmin.com/images/logo.png" width="288" height="33" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Upload</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/earn.html">Earn money</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">Contact us</a>
+                    </li>
+                </ul>
+                <a href="https://apkadmin.com/register.html" class="btn btn-primary"><i class="fas fa-user"></i> Sign Up</a>
+                <a href="https://apkadmin.com/login.html" class="btn btn-success"><i class="fas fa-sign-in-alt"></i> Login</a>
+            </div>
+        </nav>
+        <div class="holderPanel">
+            <div class="contentPanel">
+                <div id="header" style="display: none;">
+                    <div class="container1">
+                        <div id="logo" style="float: left;" onClick="if (!window.__cfRLUnblockHandlers) return false; location.href='https://apkadmin.com';" data-cf-modified-06ca2f547266853bdd94276e-="">
+                        </div>
+                        <div class="UserHead"><span>&#9776;</span> Balance:
+                            <strong></strong>, Used space:
+                            <strong> GB</strong>, Traffic available today:
+                            <strong>Unlimited</strong>
+                        </div>
+                        <div id="mainmenu">
+                            <ul>
+                                <li><a href="https://apkadmin.com/login.html">Login</a></li>
+                                <li><a class="btn_blue" href="https://apkadmin.com/register.html">Sign Up</a></li>
+                            </ul>
+                            <div id="language">
+                                <ul>
+                                    <li>
+                                        <a>
+<span class="trf trf-english"></span>
+</a>
+                                        <ul>
+                                            <li>
+                                                <a href="https://apkadmin.com/?op=change_lang&lang=russian">
+<span class="trf trf-russian"></span><span class="langname">Russian</span>
+</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://apkadmin.com/?op=change_lang&lang=german">
+<span class="trf trf-german"></span><span class="langname">German</span>
+</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://apkadmin.com/?op=change_lang&lang=french">
+<span class="trf trf-french"></span><span class="langname">French</span>
+</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://apkadmin.com/?op=change_lang&lang=arabic">
+<span class="trf trf-arabic"></span><span class="langname">Arabic</span>
+</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://apkadmin.com/?op=change_lang&lang=turkish">
+<span class="trf trf-turkish"></span><span class="langname">Turkish</span>
+</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://apkadmin.com/?op=change_lang&lang=polish">
+<span class="trf trf-polish"></span><span class="langname">Polish</span>
+</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://apkadmin.com/?op=change_lang&lang=thai">
+<span class="trf trf-thai"></span><span class="langname">Thai</span>
+</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://apkadmin.com/?op=change_lang&lang=spanish">
+<span class="trf trf-spanish"></span><span class="langname">Spanish</span>
+</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://apkadmin.com/?op=change_lang&lang=japan">
+<span class="trf trf-japan"></span><span class="langname">Japan</span>
+</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://apkadmin.com/?op=change_lang&lang=hungary">
+<span class="trf trf-hungary"></span><span class="langname">Hungary</span>
+</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://apkadmin.com/?op=change_lang&lang=indonesia">
+<span class="trf trf-indonesia"></span><span class="langname">Indonesia</span>
+</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://apkadmin.com/?op=change_lang&lang=dutch">
+<span class="trf trf-dutch"></span><span class="langname">Dutch</span>
+</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://apkadmin.com/?op=change_lang&lang=hebrew">
+<span class="trf trf-hebrew"></span><span class="langname">Hebrew</span>
+</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="container">
+
+                    <div class="row" id="siteContent">
+                        <div id="dropzone" style="display: none;">
+                            <p>Drag-n-drop your files here...</p>
+                        </div>
+                        <div class="rrd col-12 col-lg-9">
+                            <link href="//code.jquery.com/ui/1.11.2/themes/cupertino/jquery-ui.css" type="text/css" rel="stylesheet" />
+                            <script src="https://apkadmin.com/js/jquery-ui.js" type="06ca2f547266853bdd94276e-text/javascript"></script>
+                            <link rel="stylesheet" type="text/css" href="https://apkadmin.com/css/upload.css" />
+                            <script src="https://apkadmin.com/js/upload.js" type="06ca2f547266853bdd94276e-text/javascript"></script>
+                            <script src="https://apkadmin.com/js/dragndrop.js" type="06ca2f547266853bdd94276e-text/javascript"></script>
+                            <script src="https://apkadmin.com/js/multiselector.js?r=3" type="06ca2f547266853bdd94276e-text/javascript"></script>
+                            <div id="homepageTitle">
+                                <h1 class="main-h1">Unlimited APK files sharing service</h1>
+                            </div>
+                            <div class="section">
+                                <ul class="tabs">
+                                    <li id="select_file" class="current">File upload</li>
+                                    <li id="select_url">Remote URL upload</li>
+
+                                </ul>
+                                <div class="uploadtab box visible" id="file_upload">
+                                    <div class="tabcontent">
+                                        <form id="uploadfile" action="https://cloud.apkadmin.com/cgi-bin/upload.cgi?upload_type=file&utype=anon">
+                                            <input type="hidden" name="sess_id" value="">
+                                            <input type="hidden" name="utype" value="anon">
+                                            <div class="uploadfile">
+                                                <div class="drag-text">
+                                                    Drag and Drop file
+                                                </div>
+                                                <div class="or-text">
+                                                    <span>or</span>
+                                                </div>
+                                                <div class="more-btn-position"></div>
+                                                <div class="browsebtn btn btn-success">
+                                                    <input type="file" multiple="multiple" id="file_0" class="uploadbtn">
+
+                                                    <span class="btext">Browse</span>
+                                                </div>
+                                                <div class="progress_div"></div>
+                                                <table id="files_list"></table>
+                                                <table id="advanced_opts" style="display: none;">
+
+                                                    <tr>
+                                                        <td>Link Password:</td>
+                                                        <td><input type="text" name="link_pass" class="myForm form-control" < td></tr>
+                                                    <tr>
+                                                        <td>Upload to folder:</td>
+                                                        <td>
+                                                            <Select name="to_folder" class="form-control">
+<option value="">--</option>
+<option value="0"> / </option>
+</Select>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </form>
+                                        <img src="/images/upload-icon.png" alt="icon" class="upload-icon">
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="box" id="url_upload">
+                                    <div class="tabcontent">
+                                        <div class="progress_div"></div>
+                                        <div class="reurlupload">
+                                            <div class="progress_div"></div>
+                                            <form method="post" id="uploadurl" action="https://cloud.apkadmin.com/cgi-bin/upload.cgi?upload_type=url">
+                                                <input type="hidden" name="sess_id" value="">
+                                                <input type="hidden" name="utype" value="anon">
+                                                <input type="hidden" name="file_public" value="1"> You can enter up to <b>2</b> URLs, one URL per row</p>
+                                                <p>Max file size is <b>400 Mb</b></p>
+                                                <textarea name="url_mass" class="form-control" placeholder=""></textarea>
+                                                <div class="row">
+                                                    <div class="col-12 advanced borderless">
+                                                        <h2>Advanced options</h2>
+                                                        <div class="form-group">
+                                                            <label for="proxyurl">Proxy URL</label>
+                                                            <input name="proxyurl" class="form-control" value="" type="text" placeholder="e.g. 127.0.0.1">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="recemail">Recipient's Email</label>
+                                                            <input name="recemail" class="form-control" value="" type="text" placeholder="e.g. yourmail@site.com">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="linkpass">Link Password</label>
+                                                            <input name="linkpass" class="form-control" value="" type="password" placeholder="Enter password">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="to_folder">Upload to folder</label>
+                                                            <select name="to_folder" value="" class="form-control">
+<option value="default">--</option>
+</select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <script type="06ca2f547266853bdd94276e-text/javascript">
+                                                    $('#url_upload .advanced > h2').on('click', function() {
+                                                        $(this).closest('.advanced').find('.form-group').slideDown(150);
+                                                        return false;
+                                                    });
+                                                </script>
+
+                                                <div>
+                                                    <button name="upload" class="uploadbtn btn btn-primary" style="padding: 0;">Upload</button>
+                                                    <div class="clear"></div>
+                                                    <input type="checkbox" name="tos" value="" checked>
+                                                    <span class="tosread">I have read and agree to the TOS</span>
+                                                </div>
+
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="box" id="copy_upload">
+                                    <div class="tabcontent">
+                                        <div class="copyfiles">
+                                            <form method="post" action="" onsubmit="if (!window.__cfRLUnblockHandlers) return false; if(!this.tos.checked){ alert('You must agree with TOS'); return(false); }" data-cf-modified-06ca2f547266853bdd94276e-="">
+                                                <input type="hidden" name="op" value="my_files">
+                                                <input type="hidden" name="add_my_acc" value="1">
+                                                <input type="hidden" name="token" value="2c365268b668ff56f510e783873f5d46">
+                                                <textarea name="url_mass" style="width:545px; height:160px;"></textarea>
+                                                <div class="clear"></div>
+
+                                                <div style="text-align: center; padding: 10px; margin: 20px auto;">
+                                                    <button name="upload" class="uploadbtn">
+<span class="bicon">
+
+<img class="vanb" src="https://apkadmin.com/images/ico_f_btn_browse.png">
+</span>
+<span class="btext">Upload<i>!</i></span>
+</button>
+                                                    <div class="clear"></div>
+                                                    <input type="checkbox" name="tos" value="" checked>
+                                                    <span class="tosread">I have read and agree to the TOS</span>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <script type="06ca2f547266853bdd94276e-text/javascript">
+                                var urluploader = new URLUploader('.reurlupload form', '.reurlupload .progress_div', {
+                                    return_url: 'https://apkadmin.com/?op=upload_result&',
+                                    tmp_url: 'https://cloud.apkadmin.com/tmp',
+                                    oncomplete: function(ret) {
+                                        var redirect_params = $(ret).map(function(i, e) {
+                                            return "st=" + e.file_status + "&fn=" + e.file_code;
+                                        });
+                                        document.location = 'https://apkadmin.com/?op=upload_result&' + redirect_params.toArray().join('&');
+                                    }
+                                });
+                                $('.reurlupload .uploadbtn').click(function(evt) {
+                                    evt.preventDefault();
+                                    if (!$('.reurlupload form').get(0).tos.checked) {
+                                        alert("You must agree with TOS");
+                                        return;
+                                    }
+                                    urluploader.start(this.form.url_mass.value);
+                                });
+
+                                var uploader = new FileUploader('#uploadfile', {
+                                    return_url: 'https://apkadmin.com/?op=upload_result&'
+                                });
+                                var multiselector = new MultiSelector('#files_list', '#file_0', {
+                                    file_public_default: '1',
+                                    ext_allowed: '',
+                                    ext_not_allowed: 'mp3|avi|pdf|mkv|mp4|3gp|jpg|jpeg|png|m4a|exe|iso',
+                                    max_upload_files: '2',
+                                    max_upload_filesize: '400',
+                                    oncomplete: function(files) {
+                                        uploader.start(files);
+                                    }
+                                });
+                                $('.torrent input[type=file]').change(function() {
+                                    $(this.form).submit();
+                                });
+                                $('#magnet').on('paste', function(evt) {
+                                    setTimeout(function() {
+                                        evt.target.form.submit()
+                                    }, 0)
+                                });
+                            </script>
+                            <div class="upload-bottom-text">
+                                <section>By using our services you agree our <a href="/tos.html">Terms of Service</a> and <a href="/pages/privacy_policy.html">Privacy policy</a></section>
+                                <section>Max file size: 400MB (Guest); 2GB (Registered)</section>
+                            </div>
+                        </div>
+                        <style type="text/css">
+                            #container {
+                                padding-bottom: 100px;
+                            }
+
+                            .SidemenuPanel ul.otherMenus li.activeupld {
+                                background: #363636;
+                                border-left: 2px solid #131313;
+                                cursor: pointer
+                            }
+
+                            .SidemenuPanel ul.otherMenus li.activeupld i {
+                                color: #fff;
+                            }
+
+                            @media (min-width: 980px) and (max-width: 1024px) {
+                                .rrd {
+                                    width: 100%;
+                                }
+                            }
+                        </style>
+                        <script type="06ca2f547266853bdd94276e-text/javascript">
+                            var dropzone = document.getElementById('dropzone');
+                            var dragndrop = new DragNDropHandler(dropzone, {
+                                multiselector: multiselector
+                            });
+                            var ctr = 0;
+
+                            document.body.addEventListener('dragenter', function() {
+                                ctr++;
+                                if (ctr > 0) $(dropzone).show();
+                            });
+
+                            document.body.addEventListener('dragleave', function() {
+                                ctr--;
+                                if (ctr <= 0) $(dropzone).hide();
+                            });
+
+                            document.body.addEventListener('dragenter', function() {
+                                $('#file_upload .uploadfile').css('border-color', '#008bd5');
+                            });
+
+                            document.body.addEventListener('drop', function() {
+                                $('#file_upload .uploadfile').css('border-color', '#ced4da');
+                            });
+                        </script>
+                        <style>
+                            #dropzone {
+                                width: 95%;
+                                height: 95%;
+                                z-index: 12000;
+                                position: absolute;
+                                border: 0;
+                                background: transparent;
+                                border-radius: 10px;
+                            }
+
+                            #dropzone p {
+                                position: relative;
+                                top: 120px;
+                                font-size: 28px;
+                                opacity: 0;
+                            }
+                        </style>
+                    </div>
+                </div>
+                <div class="bg-white" id="features">
+                    <div class="container">
+                        <div class="row features">
+                            <div class="col-12">
+                                <h2>Our Features</h2>
+                                <p class="full">We are file sharing service for mobile files: APK and similar files. Easily upload your APK files, share it and earn money.<br> Unlimited disk space. No deletion time. Unlimited downloads. Unlimited speed.</p>
+                            </div>
+                            <div class="col-12 col-md-6 feature">
+                                <section>
+                                    <div class="name">
+                                        <strong>Unlimited disk space</strong>
+                                        <i class="fas fa-hdd"></i>
+                                    </div>
+                                    <p>We do not limit disk space for APK and other mobile files. You can storage as much as you want for free. We do not remove inactive (without downloads) files, your files will be always safe.
+                                        <br>Do not upload copyrighted files, all files with copyrights will be removed.</p>
+                                </section>
+                            </div>
+                            <div class="col-12 col-md-6 feature">
+                                <section>
+                                    <div class="name">
+                                        <strong>Share your APK files with everyone</strong>
+                                        <i class="fas fa-share-alt"></i>
+                                    </div>
+                                    <p>Apkadmin.com is APK files sharing service. With our powerful network your files will be always reachable.</p>
+                                </section>
+                            </div>
+                            <div class="col-12 col-md-6 feature">
+                                <section>
+                                    <div class="name">
+                                        <strong>Fast downloading</strong>
+                                        <i class="fas fa-fighter-jet"></i>
+                                    </div>
+                                    <p>All downloaders receive high speed from any place. Our servers is located in multiple locations around the world.</p>
+                                </section>
+                            </div>
+                            <div class="col-12 col-md-6 feature">
+                                <section>
+                                    <div class="name">
+                                        <strong>Instant availability</strong>
+                                        <i class="fas fa-stopwatch"></i>
+                                    </div>
+                                    <p>We know that our users wants to download files instantly, this is why we do not ask to wait before & next download.</p>
+                                </section>
+                            </div>
+                            <div class="col-12 col-md-6 feature">
+                                <section>
+                                    <div class="name">
+                                        <strong>Earn money</strong>
+                                        <i class="fas fa-euro-sign"></i>
+                                    </div>
+                                    <p>Everyone who sharing APK files can earn money without investments. Share your APK files and earn money from downloads.</p>
+                                </section>
+                            </div>
+                            <div class="col-12 col-md-6 feature">
+                                <section>
+                                    <div class="name">
+                                        <strong>Unlimited downloads</strong>
+                                        <i class="fas fa-infinity"></i>
+                                    </div>
+                                    <p>We do not limit how much times any user can download files: everyone can download as much as they need for free and without restrictions.</p>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-buffer"></div>
+        <div class="clear"></div>
+    </div>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-8">
+                    <ul class="list-unstyled">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/pages/earn.html">Earn money</a></li>
+                        <li><a href="/tos.html">TOS</a></li>
+                        <li><a href="/pages/privacy_policy.html">Privacy</a></li>
+                        <li><a href="/pages/dmca.html">DMCA</a></li>
+                        <li><a href="/contact.html">Contacts</a></li>
+                        <li><a href="/contact.html">Report abuse</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-4 copyright">
+                    Copyright © 2020 Apkadmin.com, All Rights Reserved.
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163585626-1" type="06ca2f547266853bdd94276e-text/javascript"></script>
+                    <script type="06ca2f547266853bdd94276e-text/javascript">
+                        window.dataLayer = window.dataLayer || [];
+
+                        function gtag() {
+                            dataLayer.push(arguments);
+                        }
+                        gtag('js', new Date());
+
+                        gtag('config', 'UA-163585626-1');
+                    </script>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </footer>
+    <script type="06ca2f547266853bdd94276e-text/javascript">
+        if (window.location.href.indexOf('my_account') > -1) {
+            $('#myAccount').css('color', '#73c54b');
+            $('#homepageTitle h1').text('My account');
+        } else if (window.location.href.indexOf('my_files') > -1) {
+            $('#myFiles').css('color', '#73c54b');
+        } else if (window.location.href.indexOf('my_reports') > -1) {
+            $('#myReports').css('color', '#73c54b');
+            $('#homepageTitle h1').text('Reports');
+        } else if (window.location.href.indexOf('upload_result&st=OK') > -1) {}
+    </script>
+    <script type="06ca2f547266853bdd94276e-text/javascript">
+        // resize upload form on index
+        function fullHeight() {
+            const screenHeight = $(window).height();
+            const navbarHeight = $('.navbar').outerHeight();
+            // const siteTitleHeight = $('#homepageTitle .main-h1').outerHeight();
+            const contentHeight = $('#siteContent').outerHeight();
+            const featuresPadding = screenHeight - navbarHeight - contentHeight;
+            if (featuresPadding < 50) {
+                $('.features').css('margin-top', '50px');
+            } else {
+                $('.features').css('margin-top', featuresPadding);
+            }
+        }
+
+        // fullHeight();
+
+        // $( window ).resize(function() {
+        // 	fullHeight();
+        // });
+    </script>
+    <script type="06ca2f547266853bdd94276e-text/javascript">
+        //footer always on the bottom
+        $(document).ready(function() {
+
+            var docHeight = $(window).height();
+            var footerHeight = $('#footer').outerHeight();
+            var footerTop = $('#footer').position().top + footerHeight;
+
+            if (footerTop < docHeight)
+                $('#footer').css('margin-top', +(docHeight - footerTop) + 'px');
+        });
+    </script>
+    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="06ca2f547266853bdd94276e-|49" defer=""></script>
+</body>
+
+</html>
